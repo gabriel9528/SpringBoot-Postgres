@@ -28,7 +28,7 @@ public class PersonServiceImpl implements PersonService {
         Person existingPerson = personRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Persona no encontrada con el id: " + id));
 
-        // Realizar validaciones específicas del dominio aquí, por ejemplo:
+        // Realizar validaciones 
         if (updatedPerson.getName() == null || updatedPerson.getName().isEmpty()) {
             throw new IllegalArgumentException("El nombre no puede estar vacío.");
         }
